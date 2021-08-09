@@ -23,7 +23,7 @@ export default async (
     }
 
     try {
-      const metadata = await sharp(thumbPath + "jljkj").metadata();
+      const metadata = await sharp(thumbPath).metadata();
       if (
         metadata.height === Number(height) &&
         metadata.width === Number(width)
