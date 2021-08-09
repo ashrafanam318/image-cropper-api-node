@@ -27,9 +27,11 @@ route.get(
         if (thumbPath) res.sendFile(thumbPath);
         else res.send("Image Data Invalid");
       } catch {
+        res.status(404);
         res.send("No Image Found");
       }
     } else {
+      res.status(404);
       res.send("No file name provided");
     }
   }
